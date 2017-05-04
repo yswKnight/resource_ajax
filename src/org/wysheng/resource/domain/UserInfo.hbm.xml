@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="UserInfo" table="UserInfo">
+  <!--UserInfo(用户信息表） 
+用户ID-->
+  <id column="userID" name="userID" type="string"/>
+  <!--用户名称-->
+  <property generated="never" lazy="false" name="name" type="string"/>
+  <!--密码 -->
+  <property generated="never" lazy="false" name="password" type="string"/>
+  <!--电子邮件 -->
+  <property generated="never" lazy="false" name="email" type="string"/>
+  <!--电话-->
+  <property generated="never" lazy="false" name="telephone" type="string"/>
+  <!--用户类型-->
+  <property generated="never" lazy="false" name="type" type="integer"/>
+  <!--部门ID-->
+  <many-to-one class="Department" column="deptID" lazy="false" name="deptID"/>
+ </class>
+</hibernate-mapping>

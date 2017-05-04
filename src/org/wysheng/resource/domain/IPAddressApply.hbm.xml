@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="IPAddressApply" table="IPAddressApply">
+  <!--IPAddressApply（IP地址申请单） 
+申请单ID -->
+  <id column="applyID" name="applyID" type="integer"/>
+  <!--申请数量-->
+  <property generated="never" lazy="false" name="quantity" type="integer"/>
+  <!--使用地点 -->
+  <property generated="never" lazy="false" name="address" type="string"/>
+  <!--网口号码 -->
+  <property generated="never" lazy="false" name="portNumber" type="string"/>
+  <!--使用时间 -->
+  <property generated="never" lazy="false" name="timeLimit" type="date"/>
+ </class>
+</hibernate-mapping>

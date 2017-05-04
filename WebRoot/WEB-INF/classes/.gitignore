@@ -1,0 +1,7 @@
+/.struts.mex
+/applicationContext.xml
+/org/
+/ssh-action.xml
+/ssh-dao.xml
+/ssh-service.xml
+/struts.xml

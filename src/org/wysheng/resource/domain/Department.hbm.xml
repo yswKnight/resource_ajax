@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="Department" table="Department">
+  <!--Department（部门表） 
+部门ID -->
+  <id column="DeptID" name="deptID" type="integer">
+   <generator class="increment"/>
+  </id>
+  <!--部门名称 -->
+  <property column="DeptName" generated="never" lazy="false"
+   name="deptName" type="string" update="false"/>
+  <!--部门负责人 -->
+  <property column="Manager" generated="never" lazy="false"
+   name="manager" type="string"/>
+  <!--备注信息 -->
+  <property column="DeptInfo" generated="never" lazy="false"
+   name="deptInfo" type="string"/>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="OperateLog" table="OperateLog">
+  <!--OperateLog（申请单流程操作记录表） 
+操作记录ID -->
+  <id column="id" name="id" type="integer">
+   <generator class="increment"/>
+  </id>
+  <!--操作类型-->
+  <property generated="never" lazy="false" name="operateType" type="string"/>
+  <!--操作日期 -->
+  <property generated="never" lazy="false" name="operateDate" type="date"/>
+  <!--操作人 -->
+  <property generated="never" lazy="false" name="userID" type="string"/>
+  <!--操作说明 -->
+  <property generated="never" lazy="false" name="describe" type="string"/>
+  <!--操作结果 -->
+  <property generated="never" lazy="false" name="result" type="string"/>
+  <!--申请单ID -->
+  <many-to-one column="applyID" name="applyID"/>
+ </class>
+</hibernate-mapping>

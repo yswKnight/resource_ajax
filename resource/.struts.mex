@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="user" location="10,9" size="180,71">
+    <action name="user_*" location="15,23" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <package name="applyflow" location="10,185" size="180,70">
+    <action name="applyFlow_*" location="15,23" size="150,40" />
+  </package>
+  <package name="department" location="10,360" size="180,70">
+    <action name="dept_*" location="15,23" size="150,40" />
+  </package>
+</Struts2Diagram>
+

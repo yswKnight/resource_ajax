@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+	<class name="Apply" table="Apply">
+		<!--Apply（申请单） -->
+		<!--申请单ID -->
+		<id name="applyID" type="integer" column="ApplyID">
+			<generator class="increment"></generator>
+		</id>
+		<!--申请日期 -->
+		<property name="applyDate" type="date"></property>
+		<!--联系电话 -->
+		<property name="applyReason" type="string"></property>
+		<!--申请单状态 -->
+		<property name="applyStatus" type="integer"></property>
+		<!--申请人-->
+		<property name="userID" type="string"></property>
+		<!--审批人 -->
+		<property name="approver" type="string"></property>
+		<!--分配人 -->
+		<property name="assigner" type="string"></property>
+		<!--处理人 -->
+		<property name="dealer" type="string"></property>
+		<!--申请单主题 -->
+		<property name="phone" type="string"></property>
+		<!--申请原因 -->
+		<property name="applyTitle" type="string"></property>
+		<!--备注 -->
+		<property name="enclosure" type="string"></property>
+		<!--附件 -->
+		<property name="remark" type="string"></property>
+		<!--申请单类型 -->
+		<many-to-one name="applyTypeID" column="ApplyTypeID" class="ApplyFlow" lazy="false"></many-to-one>
+	</class>
+
+
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="ApplyFlow" table="ApplyFlow">
+  <!--ApplyFlow（分配人设置表） 
+申请单类型ID -->
+  <id column="applyTypeID" name="applyTypeID" type="integer">
+   <generator class="increment"/>
+  </id>
+  <!--申请单类型名称 -->
+  <property generated="never" lazy="false" name="applyTypeName" type="string"/>
+  <!--分配人 -->
+  <property generated="never" lazy="false" name="assigner" type="string"/>
+ </class>
+</hibernate-mapping>

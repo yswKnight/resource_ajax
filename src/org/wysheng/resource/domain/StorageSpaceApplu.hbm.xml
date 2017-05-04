@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.wysheng.resource.domain">
+ <class name="StorageSpaceApply" table="StorageSpaceApply">
+  <!--StorageSpaceApply（存储空间申请单） 
+申请单ID-->
+  <id column="applyID" name="applyID" type="integer"/>
+  <!--空间-->
+  <property generated="never" lazy="false" name="zone" type="integer"/>
+  <!--接口人 -->
+  <property generated="never" lazy="false" name="interfaceMan" type="string"/>
+  <!--权限 -->
+  <property generated="never" lazy="false" name="right" type="string"/>
+  <!--使用期限-->
+  <property generated="never" lazy="false" name="timeLimit" type="date"/>
+  <!--申请单ID-->
+ </class>
+</hibernate-mapping>

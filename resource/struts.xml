@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="user"  namespace="/user"  extends="json-default">
+		<action name="user_*" class="userInfoAction" method="{1}">
+	</action>
+	</package>
+	
+	
+	<package name="applyflow" namespace="/applyflow" extends="json-default">
+		<action name="applyFlow_*" class="applyFlowAction" method="{1}">
+		
+		</action>
+	</package>
+
+	<package name="department" namespace="/dept" extends="json-default">
+		<action name="dept_*" class="departmentAction" method="{1}">
+		
+		</action>
+	</package>
+	
+	<package name="apply" namespace="/apply" extends="json-default">
+		<action name="apply_*" class="applyAction" method="{1}">
+		
+		</action>
+	</package>
+	
+	<package name="office" namespace="/office" extends="json-default">
+		<action name="office_*" class="officeEmailAction" method="{1}">
+		
+		</action>
+	</package>
+	
+		<package name="ip" namespace="/ip" extends="json-default">
+		<action name="ip_*" class="org.wysheng.resource.web.action.IPAddressAction" method="{1}">
+		
+		</action>
+	</package>
+	
+	<package name="space" namespace="/space" extends="json-default">
+		<action name="space_*" class="spaceAction" method="{1}">
+		
+		</action>
+	</package>
+</struts>    
